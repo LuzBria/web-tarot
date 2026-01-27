@@ -1,0 +1,163 @@
+/* Reset suave */
+* {
+  box-sizing: border-box;
+}
+
+/* General */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #faf7fb;
+  color: #3a3a3a;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #b48cc8, #e6b7d6);
+  color: white;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+header h1 {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+header p {
+  animation: fadeUp 1.6s ease forwards;
+}
+
+/* Secciones */
+section {
+  max-width: 850px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* Títulos */
+h2 {
+  font-family: "Georgia", serif;
+  color: #6a4c93;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Texto */
+p {
+  font-size: 1.05rem;
+}
+
+/* Listas */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Links / Botones */
+a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #6a4c93;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  border-bottom: 2px solid #6a4c93;
+  opacity: 0.8;
+}
+
+/* Footer */
+footer {
+  background-color: #f0eaf4;
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Botones CTA */
+.btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.95;
+}/* Botón secundario */
+.btn-secondary {
+  background: linear-gradient(135deg, #e6b7d6, #b48cc8);
+  color: #4a2c5d;
+}
+
+/* =========================
+   RESPONSIVE - CELULAR
+   ========================= */
+
+@media (max-width: 900px) {
+
+  header {
+    padding: 50px 20px;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  p, li {
+    font-size: 1rem;
+  }
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+  /* Botones más grandes para dedo */
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    font-size: 1.05rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 20px;
+  }
+}
+
+/* Animación base */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicar a secciones */
+section {
+  animation: fadeUp 0.9s ease forwards;
+}
