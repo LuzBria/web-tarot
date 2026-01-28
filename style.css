@@ -207,4 +207,11 @@ section:first-of-type h2 {
   }
 }
 
+@media (max-width: 768px) {
+  section {
+    animation: fadeUp 0.8s ease forwards;
+  }
+}
+
+
 
