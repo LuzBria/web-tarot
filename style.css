@@ -1,9 +1,13 @@
-/* Reset suave */
+/* =========================
+   RESET SUAVE
+========================= */
 * {
   box-sizing: border-box;
 }
 
-/* General */
+/* =========================
+   GENERAL
+========================= */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background-color: #faf7fb;
@@ -12,7 +16,9 @@ body {
   line-height: 1.7;
 }
 
-/* Header */
+/* =========================
+   HEADER
+========================= */
 header {
   background: linear-gradient(135deg, #b48cc8, #e6b7d6);
   color: white;
@@ -28,14 +34,19 @@ header p {
   animation: fadeUp 1.6s ease forwards;
 }
 
-/* Secciones */
+/* =========================
+   SECCIONES
+========================= */
 section {
   max-width: 850px;
   margin: auto;
   padding: 60px 20px;
+  animation: fadeUp 0.9s ease forwards;
 }
 
-/* Títulos */
+/* =========================
+   TITULOS
+========================= */
 h2 {
   font-family: "Georgia", serif;
   color: #6a4c93;
@@ -43,12 +54,13 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* Texto */
+/* =========================
+   TEXTO
+========================= */
 p {
   font-size: 1.05rem;
 }
 
-/* Listas */
 ul {
   padding-left: 20px;
 }
@@ -57,7 +69,9 @@ li {
   margin-bottom: 10px;
 }
 
-/* Links / Botones */
+/* =========================
+   LINKS
+========================= */
 a {
   display: inline-block;
   margin-top: 15px;
@@ -70,10 +84,33 @@ a {
 
 a:hover {
   border-bottom: 2px solid #6a4c93;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
-/* Footer */
+/* =========================
+   BOTONES CTA
+========================= */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #b88dd9, #e6c6f0);
+  color: white;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+  opacity: 0.95;
+}
+
+/* =========================
+   FOOTER
+========================= */
 footer {
   background-color: #f0eaf4;
   text-align: center;
@@ -82,70 +119,77 @@ footer {
   color: #555;
 }
 
-/* Botones CTA */
-.btn {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-}
-
-.btn:hover {
-  opacity: 0.95;
-}/* Botón secundario */
-.btn-secondary {
-  background: linear-gradient(135deg, #e6b7d6, #b48cc8);
-  color: #4a2c5d;
-}
-
 /* =========================
-   RESPONSIVE - CELULAR
-   ========================= */
+   VERSION MOVIL REAL
+========================= */
+@media (max-width: 768px) {
 
-@media (max-width: 900px) {
+  body {
+    font-size: 18px;
+  }
 
   header {
-    padding: 50px 20px;
+    padding: 3rem 1.5rem;
   }
 
   header h1 {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
+    line-height: 1.2;
   }
 
   header p {
-    font-size: 1rem;
+    font-size: 1.15rem;
+    margin-top: 1rem;
   }
 
   section {
-    padding: 40px 20px;
+    max-width: 100%;
+    padding: 2.5rem 1.5rem;
+    text-align: left;
   }
 
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 
-  p, li {
-    font-size: 1rem;
+  p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    text-align: left;
   }
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-}
 
-  /* Botones más grandes para dedo */
-  .btn {
+  li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+
+  a {
+    border-bottom: none;
+  }
+
+  a.btn {
+    display: block;
     width: 100%;
+    margin-top: 1.4rem;
+    padding: 18px;
+    border-radius: 35px;
+    font-size: 1.15rem;
     text-align: center;
-    padding: 16px;
-    font-size: 1.05rem;
   }
 
   footer {
-    font-size: 0.8rem;
-    padding: 20px;
+    font-size: 0.85rem;
+    padding: 1.5rem;
   }
 }
 
-/* Animación base */
+/* =========================
+   ANIMACION
+========================= */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -155,9 +199,4 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Aplicar a secciones */
-section {
-  animation: fadeUp 0.9s ease forwards;
 }
